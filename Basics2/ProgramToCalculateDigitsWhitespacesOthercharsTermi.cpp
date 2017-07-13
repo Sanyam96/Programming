@@ -93,6 +93,7 @@ Reference :
 	If you give no arguments, the default is 1 char or newline, whichever is first. 
 	You may give only a number argument, in which case the default delimiter is eof( ).
 
+	reference: https://www.daniweb.com/programming/software-development/threads/93275/cin-get-cin-ignore
 	//---------------------------------------------------------------------------------------------------
 
 
