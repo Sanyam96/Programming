@@ -2,17 +2,35 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+// int main() {
 
+// 	char currentCharacters;
+// 	int count = 0;
+// 	cin >> currentCharacters;
+// 	while( currentCharacters != '$') {
+// 		count++;
+// 		cin >> currentCharacters;
+// 	}
+
+// 	cout << count << endl;
+
+//     return 0;
+// }
+
+int main(int argc, char const *argv[])
+{
+	/* code */
 	char currentCharacters;
 	int count = 0;
-	cin >> currentCharacters;
+	// cin >> currentCharacters;
+	currentCharacters = cin.get();
 	while( currentCharacters != '$') {
 		count++;
-		cin >> currentCharacters;
+		// cin >> currentCharacters;
+		currentCharacters = cin.get();
 	}
 
 	cout << count << endl;
 
-    return 0;
+	return 0;
 }
