@@ -30,7 +30,7 @@ int main() {
 		increment = increment * 0.1;
 		i++;
 	}
-	cout << increment << "\n";
+	// cout << increment << "\n";
 	answer = answer + increment;
 
 	while( double_equals(answer*answer, number) ) {
@@ -40,3 +40,4 @@ int main() {
 
     return 0;
 }
+// https://codereview.stackexchange.com/questions/82958/compare-two-doubles-to-n-decimal-places
