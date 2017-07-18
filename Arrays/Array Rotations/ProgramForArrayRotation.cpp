@@ -1,23 +1,71 @@
 // Program for array rotation
 /*
 function rotate(ar[], d, n) that rotates arr[] of size n by d elements.
-Input : [1, 2, 3, 4, 5, 6, 7]
-d = 2
-Output : [3, 4, 5, 6, 7, 1, 2]
+	d = 2, n = 7
+	Input : [1, 2, 3, 4, 5, 6, 7]
+	Output : [3, 4, 5, 6, 7, 1, 2]
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 
+// Approach 4
+// The Reversal Algorithm ==>> Time Complexity: O(n)
+// Reference Link: http://www.geeksforgeeks.org/program-for-array-rotation-continued-reversal-algorithm/
+
+void printArray(int arr[], int size);
+
+void reverseArray(int arr[], int start, int end);
+ 
+void leftRotate(int arr[], int d, int n)
+{
+    reverseArray(arr, 0, d-1);
+    reverseArray(arr, d, n-1);
+    reverseArray(arr, 0, n-1);
+}
+
+void printArray(int arr[], int size)
+{
+    int i;
+    for (i = 0; i < size; i++)
+        printf("%d ", arr[i]);
+}
+
+void reverseArray(int arr[], int start, int end)
+{
+    int temp;
+    while (start < end)
+    {
+        temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
+    }
+}
+ 
+int main()
+{
+    int arr[] = {1, 2, 3, 4, 5, 6, 7};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int d = 2;
+    leftRotate(arr, d, n);
+    printArray(arr, n);
+    cout << endl;
+    return 0;
+}
+
+/*
 // Approach 3
 // Juggling Algorithm ==>> Time complexity: O(n) , Auxiliary Space: O(1)
-// Link: http://www.geeksforgeeks.org/array-rotation/
+// Reference Link: http://www.geeksforgeeks.org/array-rotation/
+
 int gcd(int a, int b)
 {
-   if( b == 0)
-     return a;
-   else
-     return gcd(b, a%b);
+	if( b == 0)
+		return a;
+	else
+		return gcd(b, a%b);
 }
 
 int main() {
@@ -29,7 +77,7 @@ int main() {
 	int i, j, k, temp;
 	for (i = 0; i < gcd(d, n); i++)
 	{
-	/* move i-th values of blocks */
+	// move i-th values of blocks 
 		temp = arr[i];
 		j = i;
 		while(1)
@@ -54,7 +102,7 @@ int main() {
 
 	return 0;
 }
-
+*/
 
 /*
 // Approach 2
