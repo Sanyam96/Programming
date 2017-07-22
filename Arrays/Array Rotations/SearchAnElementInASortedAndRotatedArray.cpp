@@ -64,6 +64,6 @@ int main()
    int arr1[] = {5, 6, 7, 8, 9, 10, 1, 2, 3};
    int n = sizeof(arr1)/sizeof(arr1[0]);
    int key = 3;
-   printf("Index: %dn", pivotedBinarySearch(arr1, n, key));
+   printf("Index: %d\n", pivotedBinarySearch(arr1, n, key));
    return 0;
 }
