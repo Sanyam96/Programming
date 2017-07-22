@@ -15,8 +15,42 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Approach 4
+// Using Hashmap
+// Time Complexity: O(n)
+// Auxiliary Space: O(n)
+typedef pair <int, int> Int_Pair;
+
+// buggy try to solve it with hashmap
+void printMajority(int arr[], int size) {
+	map <int, int> mapping;
+	int count = 1;
+	mapping.insert(Int_Pair(arr[0], count));
+	for (int i = 1; i < size; ++i) {
+		// mapping[i] = arr[i];
+		if (mapping.find(arr[i])) {
+			mapping.insert(Int_Pair(arr[i], i));
+		}
+	}
+
+	for (map<int,int>::iterator it = mapping.begin(); it != mapping.end(); ++it)
+    std::cout << it->first << " => " << it->second << '\n';
+}
+
+int main(int argc, char const *argv[])
+{
+	int a[] = {3, 3, 4, 2, 4, 4, 2, 4, 4};
+    int size = (sizeof(a))/sizeof(a[0]);
+    printMajority(a, size);
+
+	return 0;
+}
+
+
+/*
 // Approach 3
 // using Array Of Array
+// TimeComplexity : O(n)
 
 int maxElement(int arr[], int size) {
 	int max = arr[0];
@@ -90,6 +124,7 @@ int main(int argc, char const *argv[])
     cout << endl;
 	return 0;
 }
+*/
 
 
 /*
