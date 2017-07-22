@@ -15,6 +15,71 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Approach 2
+// Using Moore’s Voting Algorithm
+// Time Complexity: O(n)
+// Auxiliary Space : O(1)
+
+int findCandidate(int a[], int size)
+{
+	int maj_index = 0, count = 1;
+	int i;
+	for (i = 1; i < size; i++) {
+		if (a[maj_index] == a[i]) {
+			count++;
+		}
+		else {
+			count--;
+		}
+
+		if (count == 0) {
+			maj_index = i;
+			count = 1;
+		}
+	}
+	
+	return a[maj_index];
+}
+
+bool isMajority(int a[], int size, int cand)
+{
+	int i, count = 0;
+
+	for (i = 0; i < size; i++)
+		if (a[i] == cand) {
+			count++;
+		}
+		if (count > size/2) {
+			return 1;
+		}
+		else {
+			return 0;
+		}
+}
+
+void printMajority(int a[], int size)
+{
+	int cand = findCandidate(a, size);
+
+	if (isMajority(a, size, cand)) {
+		printf(" %d ", cand);
+	}
+	else {
+		printf("No Majority Element");
+	}
+}
+
+int main(int argc, char const *argv[]) {
+	
+	int a[] = {3, 3, 4, 2, 4, 4, 2, 4, 4};
+    int size = (sizeof(a))/sizeof(a[0]);
+    printMajority(a, size);
+    printf("\n");
+
+	return 0;
+}
+
+/*
 // Approach 1
 // Basic Approach of having 2 for loops
 // Time Complexity: O(n*n). Auxiliary Space : O(1).
@@ -53,3 +118,4 @@ int main() {
 
     return 0;
 }
+*/
