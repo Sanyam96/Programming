@@ -1,5 +1,19 @@
 // Print Hello World Without Semicolon in C++ 
 
+// Method 4 Using loops (while and for)
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+
+	while ( !(cout << "Hello World\n") ) { 
+
+	}
+    return 0;
+}
+
+
+/*
 // Method 3 by Using macros
 #include <bits/stdc++.h>
 using namespace std;
@@ -10,10 +24,10 @@ int main() {
 	if(GEEK) {
 
 	}
-	
+
     return 0;
 }
-
+*/
 
 /*
 // Method 2 Using switch statement
@@ -22,7 +36,7 @@ using namespace std;
 
 int main() {
 
-	switch ( printf("Hello World ")) {
+	switch ( printf("Hello World \n")) {
 
 	}
     return 0;
@@ -37,7 +51,7 @@ using namespace std;
 
 int main() {
 
-	if (cout << "Hello World ") {
+	if (cout << "Hello World \n") {
     }
     return 0;
 }
