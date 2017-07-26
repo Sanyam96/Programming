@@ -1,4 +1,4 @@
-// Linked List Inserting Node At The Front\
+// Linked List Inserting Node At The Front
 
 #include <bits/stdc++.h>
 using namespace std;
