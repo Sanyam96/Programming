@@ -119,8 +119,9 @@ int main() {
 
  }
 
- 
-
- 
-
+ // Time complexity of push() is O(1) as it does constant amount of work.
+ // Time complexity of insertAfter() is O(1) as it does constant amount of work.
+ // Time complexity of append is O(n) where n is the number of nodes in linked list. 
+ // Since there is a loop from head to end, the function does O(n) work.
+	 // method can also be optimized to work in O(1) by keeping an extra pointer to tail of linked list
  
