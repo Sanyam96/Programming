@@ -54,7 +54,7 @@ void selectionSort(int arr[], int n) {
 		for (int j = i + 1; j < n; ++j)	{
 
 			if( arr[i] > arr[j] ) {
-                
+
 				swap(&arr[i], &arr[j]);
 			}
 		}
@@ -70,7 +70,7 @@ void printArray(int arr[], int size) {
     cout << endl;
 }
 
-/* Main Utility Function */
+/* Main Function */
 int main() {
 
 	int arr[] = {64, 25, 12, 22, 11};
