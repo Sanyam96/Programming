@@ -7,7 +7,7 @@ int main() {
 	int count;
 	cin >> count;
 
-	for (int i = 2; i < count; ++i)
+	for (int i = 2; i <= count; ++i)
 	{
 		/* code */
 		bool prime = true;	
