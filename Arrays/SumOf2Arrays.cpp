@@ -34,39 +34,56 @@ int main() {
 	cout << "Enter size of Array1 and Array2" << endl;
 	cin >> sizeArr1 >> sizeArr2;
 
-	int *arr1 = new int(sizeArr1);
-	int *arr2 = new int(sizeArr2);
+	int biggerArrSize, smallerArrSize;
+	biggerArrSize = findMax(sizeArr1, sizeArr2);
+	
+	if(biggerArrSize == sizeArr1) {
+		biggerArrSize = sizeArr1;
+		smallerArrSize = sizeArr2;
 
-	for (int i = 0; i < sizeArr1; ++i) {
-		cin >> arr1[i];
+	}
+	else {
+		biggerArrSize = sizeArr2;
+		smallerArrSize = sizeArr1;
 	}
 
-	for (int i = 0; i < sizeArr2; ++i) {
+	int *arr1 = new int(smallerArrSize);	// smaller Array if both are not of same size
+	int *arr2 = new int(biggerArrSize);		// bigger Array if both are not of same size
+
+	for (int i = 0; i < smallerArrSize; ++i) {
+		cin >> arr1[i];
+	}
+	for (int i = 0; i < biggerArrSize; ++i) {
 		cin >> arr2[i];
 	}
 
 	int sizeResultantArray = findMax(sizeArr1, sizeArr2) + 1;
-
 	int *resArr = new int(sizeResultantArray);
 
 	int carry = 0;
 	int sum = 0;
-	int a1 = sizeArr1 - 1;
-	int a2 = sizeArr2 - 1;
+	int a1 = smallerArrSize - 1;
+	int a2 = biggerArrSize - 1;
+	int a3 = sizeResultantArray - 1;
 
 	for (int i = 0; i < sizeResultantArray-1; ++i) {
 		resArr[i] = 0;
 	}
 
-	for (int i = sizeResultantArray-1; (a1 >= 0 && a2 >= 0 && i >= 0); i--) {
-		carry = 0;
-		sum = arr1[a1] + arr2[a2];
-		a1--;
-		a2--;
+	for (int i = a1; i >= 0 ; i--) {
+		sum = carry + arr1[i] + arr2[a2];
 		carry = sum / 10;
-		resArr[i-1] += carry;
-		resArr[i] += sum % 10;
+		resArr[a3] = sum % 10;
+		a2--;
+		a3--;
 	}
+	for (int i = a2; i >= 0; i--) {
+		sum = carry + arr2[i];
+		carry = sum/10;
+		resArr[a3] = sum%10;
+		a3--;
+	}
+	resArr[0] += carry;
 
 	for (int i = 0; i < sizeResultantArray; ++i) {
 		cout << resArr[i] << " ";
