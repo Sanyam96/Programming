@@ -60,20 +60,71 @@ class Stack {
 	        }
 	        cout << endl;
 	    }
+
+	    int size() {
+	    	Node * temp = head;
+	    	int counter = 0;
+	    	while(temp != NULL) {
+	    		counter++;
+	    		temp = temp -> next;
+	    	}
+	    	return counter;
+	    }
+
+	    bool isEmpty() {
+	    	if( head == NULL ) {
+	    		return true;
+	    	}
+	    	else {
+	    		return false;
+	    	}
+	    }
+
+	    int top() {
+	    	Node * temp = head;
+	    	if( head == NULL) {
+	    		cout << "Stack is Empty\n";
+	    		return 0;
+	    	}
+	    	else {
+		    	return temp -> data;
+	    	}
+	    }
+
+
+	    /*
+	    // accessor methods
+	    int size();
+	    bool isEmpty();
+	    int top();
+
+	    // update methods
+	    void push(int elements);
+	    int pop();
+	    */
 };
 
 int main() {
-	
+
 	Stack s;
     s.push(10);
     s.push(20);
+    cout << s.top() << endl;
     s.push(30);
+    cout << s.size() << endl;
+    cout << s.isEmpty() << endl;
+    cout << s.top() << endl;
 
     s.print();
 
     s.pop();
     s.pop();
+    cout << s.isEmpty() << endl;
+    cout << s.top() << endl;
     s.pop();
+    cout << s.isEmpty() << endl;
     s.pop();
+    cout << s.top() << endl;
+    cout << s.isEmpty() << endl;
     return 0;
 }
