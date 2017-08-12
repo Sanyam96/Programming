@@ -12,7 +12,6 @@ using namespace std;
 
 // Approach 5
 // Block Swap Implementation ==>> Recursive approach  :: Time Complexity: O(n)
-// Reference Link: http://www.geeksforgeeks.org/block-swap-algorithm-for-array-rotation/
 void printArray(int arr[], int size);
 void swap(int arr[], int fi, int si, int d);
  
@@ -71,7 +70,6 @@ int main()
 /*
 // Approach 4
 // The Reversal Algorithm ==>> Time Complexity: O(n)
-// Reference Link: http://www.geeksforgeeks.org/program-for-array-rotation-continued-reversal-algorithm/
 
 void printArray(int arr[], int size);
 
@@ -119,7 +117,6 @@ int main()
 /*
 // Approach 3
 // Juggling Algorithm ==>> Time complexity: O(n) , Auxiliary Space: O(1)
-// Reference Link: http://www.geeksforgeeks.org/array-rotation/
 
 int gcd(int a, int b)
 {
