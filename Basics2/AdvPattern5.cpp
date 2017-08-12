@@ -1,4 +1,4 @@
-// Advanced Pattern 6
+// Advanced Pattern 5
 /*
 
 **
