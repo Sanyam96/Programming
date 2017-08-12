@@ -1,4 +1,4 @@
-Arithmetic Progression
+// Arithmetic Progression
 #include <bits/stdc++.h>
 using namespace std;
 
