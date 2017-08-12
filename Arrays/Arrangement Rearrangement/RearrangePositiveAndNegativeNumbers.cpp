@@ -1,7 +1,14 @@
 // Rearrange positive and negative numbers in O(n) time and O(1) extra space
 /*
-input array is [-1, 2, -3, 4, 5, 6, -7, 8, 9], then the 
-output should be [9, -7, 8, -3, 5, -1, 2, 4, 6]
+
+All the positive integers should be arranged in descending order and
+all the negative integers should be arranged in ascending order
+and order of positive and negative numbers should be alternative
+
+Input array is [-1, 2, -3, 4, 5, 6, -7, 8, 9], then the 
+Output should be [9, -7, 8, -3, 5, -1, 2, 4, 6]
+
+
 */
 
 #include <bits/stdc++.h>
