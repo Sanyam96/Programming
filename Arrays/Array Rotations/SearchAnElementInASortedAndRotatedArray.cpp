@@ -1,5 +1,4 @@
 // Search an element in a sorted and rotated array
-// Reference Link: http://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/
 
 #include <bits/stdc++.h>
 using namespace std;

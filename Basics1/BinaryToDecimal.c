@@ -1,3 +1,6 @@
+// Program to convert Binary Number to Decimal Number
+
+
 #include <stdio.h>
 
 long long int power(long long int, long long int);
