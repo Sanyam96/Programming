@@ -22,6 +22,7 @@ Output :  a
 #include <bits/stdc++.h>
 using namespace std;
 
+/*
 void subString(char str[], int n) {
     
     for (int len = 1; len <= n; len++) {    
@@ -38,6 +39,26 @@ void subString(char str[], int n) {
             cout << endl;
         }
     }
+}
+*/
+
+void subString(char str[], int n) {
+    int count = 1;
+
+    while(count <= n) {
+    
+        for(int i = 0; i <= n-count; i++ ){
+    
+            for(int j = i; j < i+count; j++ ) {
+                cout << str[j];
+            }
+    
+            cout << endl;
+        }
+    
+        count++;
+    }
+
 }
 
 /*
