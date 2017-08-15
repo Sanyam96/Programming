@@ -60,6 +60,7 @@ int main() {
 
 	Output : 
 		Hi
+		Sam
 		Bye
 
 	Description :
