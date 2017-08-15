@@ -16,7 +16,7 @@ int main() {
 /*
 	Output: 
 
-	// The for loop would get executed 5 times
+	// The for loop would get executed infinite times
 	// Because return value of the function scanf() would act as result of the condition
 	// hence value is always nonZero. hence true always
 */
