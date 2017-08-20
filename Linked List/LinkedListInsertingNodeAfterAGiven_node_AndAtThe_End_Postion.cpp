@@ -1,6 +1,9 @@
 // Linked List Inserting Node after a given node and at End
 
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 using namespace std;
 
 // A linked list node
@@ -88,7 +91,7 @@ void printList(struct Node *n) {
 		cout << n->data << " "; 
 	    n = n -> next;
 	}
-	cout << "\n" << et4ndl;
+	cout << "\n" << endl;
 }
 
 /* Driver program to test above functions*/
