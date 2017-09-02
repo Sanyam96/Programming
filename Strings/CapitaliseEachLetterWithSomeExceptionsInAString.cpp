@@ -1,11 +1,13 @@
 // Capitalise Each Letter With Some Exceptions In A String
 /*
+
 Input: 
     String:     "where there is a will, there is a way"
     Exceptions: {"is", "a"}
 
 Output:
     String:     "Where There is a Will, There is a Way" 
+
 */
     
 #include <bits/stdc++.h>
