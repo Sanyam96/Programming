@@ -95,7 +95,7 @@ int main() {
 	int size = sizeof(arr)/sizeof(arr[0][0]); 		// Size of total Array!
 	int rows = sizeof(arr)/sizeof(arr[0]);			// Size of rows
 	int columns = sizeof(arr[0])/sizeof(arr[0][0]);	// Size of columns
-	// cout << size << " " << rows << " " << columns ;
+	cout << size << " " << rows << " " << columns << "\n" ;
 
 	int * resArr = new int[rows*columns];
 
@@ -103,30 +103,77 @@ int main() {
 
 	int a = 0, b = 0, c = 0, d = 0;
 	int count = 0;
+	int x[4];
+	int resArrCounter = 0;
 
-	while( a <= columns+1 && b <= columns+1 && c <= columns+1 && d <= columns+1 ) {
-		if( arr[0][a] < arr[1][b] && arr[0][a] < arr[2][c] && arr[0][a] < arr[3][d] ) {
-			resArr[count] = arr[0][a];
+	while( a < columns || b < columns || c < columns || d < columns ) {
+
+		x[0] = arr[0][a];
+		x[1] = arr[1][b];
+		x[2] = arr[2][c];
+		x[3] = arr[3][d];
+		int temp2;
+
+
+		int minX = INT_MAX;
+
+		for(int i = 0; i < 4; i++ ) {
+			if(minX > x[i]) {
+				minX = x[i];
+				temp2 = i;
+			}
+		}
+
+		if( minX == x[0]) {
+			resArr[resArrCounter] = minX;
+			resArrCounter++;
 			a++;
-			count++;
-
 		}
-		else if( arr[1][b] < arr[0][a] && arr[1][b] < arr[2][c] && arr[1][b] < arr[3][d] ) {
-			resArr[count] = arr[1][b];
+		else if( minX == x[1]) {
+			resArr[resArrCounter] = minX;
+			resArrCounter++;
 			b++;
-			count++;			
 		}
-		else if( arr[2][c] < arr[0][a] && arr[2][c] < arr[1][b] && arr[2][c] < arr[3][d] ) {
-			resArr[count] = arr[2][c];
+		else if( minX == x[2]) {
+			resArr[resArrCounter] = minX;
+			resArrCounter++;
 			c++;
-			count++;
 		}
-		else if( arr[3][d] < arr[0][a] && arr[3][d] < arr[1][b] && arr[3][d] < arr[2][c] ) {
-			resArr[count] = arr[3][d];
+		else if( minX == x[3]) {
+			resArr[resArrCounter] = minX;
+			resArrCounter++;
 			d++;
-			count++;
 		}
+
+
+
+		// if( arr[0][a] < arr[1][b] && arr[0][a] < arr[2][c] && arr[0][a] < arr[3][d] ) {
+		// 	resArr[count] = arr[0][a];
+		// 	a++;
+		// 	count++;
+
+		// }
+		// else if( arr[1][b] < arr[0][a] && arr[1][b] < arr[2][c] && arr[1][b] < arr[3][d] ) {
+		// 	resArr[count] = arr[1][b];
+		// 	b++;
+		// 	count++;			
+		// }
+		// else if( arr[2][c] < arr[0][a] && arr[2][c] < arr[1][b] && arr[2][c] < arr[3][d] ) {
+		// 	resArr[count] = arr[2][c];
+		// 	c++;
+		// 	count++;
+		// }
+		// else if( arr[3][d] < arr[0][a] && arr[3][d] < arr[1][b] && arr[3][d] < arr[2][c] ) {
+		// 	resArr[count] = arr[3][d];
+		// 	d++;
+		// 	count++;
+		// }
 	}
+
+	for (int i = 0; i < resArrCounter; ++i) {
+		cout << resArr[i] << " ";
+	}
+	cout << "\n";
 
 	delete [] resArr;
 
