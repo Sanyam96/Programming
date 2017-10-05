@@ -7,6 +7,27 @@ class Node {
 public:
 	int data;
 	Node * next;
+
+	// Constructor
+	Node( int data ) {
+		this->data = data;
+		next = NULL;
+	}
+};
+
+void print(Node * head) {
+	while( head != NULL) {
+		cout << head->data << " ->";
+		head = head -> next;
+	}
+}
+
+
+/*
+class Node {
+public:
+	int data;
+	Node * next;
 };
 
 void print( Node * head) {
@@ -40,6 +61,7 @@ int main(int argc, char const *argv[]) {
 
 	return 0;
 }
+*/
 
 /*
 struct Node {
