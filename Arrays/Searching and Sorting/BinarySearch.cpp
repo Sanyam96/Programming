@@ -1,4 +1,4 @@
-// Binary Search
+// Binary Search Implementation
 
 #include <bits/stdc++.h>
 using namespace std;
