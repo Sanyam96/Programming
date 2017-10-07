@@ -1,9 +1,11 @@
-// Pattern 3
+// Pattern 3 for N number of Rows
 /*
+
       1
     2 3
   3 4 5
 4 5 6 7 
+
 */
 
 #include <bits/stdc++.h>
