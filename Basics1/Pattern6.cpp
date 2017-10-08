@@ -1,4 +1,4 @@
-// Pattern 6
+// Pattern 6 - Square Pattern
 
 /*
 
