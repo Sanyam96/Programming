@@ -1,13 +1,14 @@
 // Largest of three numbers
 // contain different approaches in *main* function!!
+
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-	
+int main(int argc, char const *argv[]){
+	/* code */
 	int no = 0;
 	int max = INT_MIN;
-	cout << max << endl;
+	// cout << max << endl;
 
 	for (int i = 0; i < 3; ++i) {
 		cin >> no;
@@ -17,7 +18,7 @@ int main() {
 	}
 	cout << max << endl;
 
-    return 0;
+ 	return 0;
 }
 
 
