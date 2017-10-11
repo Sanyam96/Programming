@@ -1,10 +1,12 @@
 // Insert Operation In Sorted Array
+/*
+Insertion in a sorted array
+*/
 
 #include <bits/stdc++.h>
 using namespace std;
 
-int insertSorted(int arr[], int n, int key, int capacity)
-{
+int insertSorted(int arr[], int n, int key, int capacity) {
     if (n >= capacity)
        return n;
  
