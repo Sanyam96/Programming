@@ -1,4 +1,7 @@
 // Linear Search in an unsorted Array
+/*
+Linear Search in complecity O(n)
+*/
 
 #include <bits/stdc++.h>
 using namespace std;
