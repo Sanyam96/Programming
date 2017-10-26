@@ -1,11 +1,18 @@
 // Program to calculate factorial of bigger numbers
+/*
+
+	Factorial of 30 is not calculated by normal method or by Recursion
+	But by using this method we can solve 30! or even higer numbers factorial	
+
+*/
 
 #include <bits/stdc++.h>
+#define MAX 500
 using namespace std;
 
 int main(int argc, char const *argv[]){
 
-	int a[500];
+	int a[MAX];
 	int n = 6;
 	int n2 = n;
 	int i = 0;
